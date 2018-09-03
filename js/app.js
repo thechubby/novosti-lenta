@@ -11,15 +11,37 @@ var news = [
   }
 ];
 
-function App() {
-  return (
-    <div>
-      тест
-    </div>
-  );
-}
+var News = React.createClass({
+  render: function() {
+    var data = this.props.data;
+    var template = data.map(function(item, index) {
+      return (
+        <div key={index}>
+          <p>{item.author}:</p>
+          <p>{item.text}</p>
+        </div>
+      )
+    })
+
+    return (
+      <div>
+        {template}
+      </div>
+    );
+  }
+})
+
+var App = React.createClass({
+  render: function() {
+    return (
+      <div>
+        <News data={news} />
+      </div>
+    );
+  }
+});
 
 ReactDOM.render(
   <App />,
   document.getElementById('root')
-);
+)
