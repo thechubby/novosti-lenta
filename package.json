@@ -1,0 +1,14 @@
+{
+  "name": "novosti",
+  "version": "1.0.0",
+  "description": "novostnaya lenta",
+  "main": "index.html",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Christina Marova",
+  "license": "MIT",
+  "devDependencies": {
+    "express": "^4.13.4"
+  }
+}
